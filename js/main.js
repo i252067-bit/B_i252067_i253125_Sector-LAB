@@ -39,3 +39,4 @@ function resetForm() {
         messageField.value = "";
     }
 }
+
