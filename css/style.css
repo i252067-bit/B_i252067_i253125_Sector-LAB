@@ -70,7 +70,7 @@ body {
     background-color: #fff;
     padding: 10px 0 20px;
     border-bottom: 2px solid #000;
-    height: 45px;
+    height: 55px;
 }
 
 
@@ -132,7 +132,8 @@ body {
     background: transparent;
     border: none;
     padding: 4px;
-}
+} /* header ended */
+
 /* footer section */
 .footer {
     background-color: #000;
@@ -254,7 +255,17 @@ body {
         padding: 40px 20px;
     }
 }
-
+/* footer ended */
 main {
-    margin-top: 100px;
+    margin-top: 50px;
 }
+
+.cart-item img {
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-item {
+    border-radius: 14px;
+}
+

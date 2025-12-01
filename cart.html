@@ -3,10 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Title</title>
+    <title>Cart - Sector//LAB</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    
-    
+
+<header class="header">
+    <div class="header-container">
+        <div class="nav-left">
+            <div class="hamburger icon-placeholder">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="logo">
+            <h1>Sector//LAB</h1>
+        </div>
+
+        <div class="nav-right">
+            <div class="icon-placeholder"><img src="images/search (1).png" width="28"></div>
+            <div class="icon-placeholder"><img src="images/user (2).png" width="28"></div>
+            <div class="icon-placeholder"><img src="images/trolley.png" width="28"></div>
+        </div>
+    </div>
+</header>
+
+<main class="container my-4">
+
+    <div class="row mt-4">
+
+        <!-- LEFT SIDE  -->
+       <div class="col-md-6">
+
+    <h3 class="fw-bold mb-4">Items in Cart</h3>
+
+    <!-- ITEM 1 -->
+    <div class="cart-item d-flex align-items-center p-3 mb-3 rounded shadow-sm bg-light">
+        <img src="images/hoodie1.jpeg" class="rounded me-3" width="70" height="70">
+        <div class="flex-grow-1">
+            <strong>Tech Hoodie Clean Fit</strong><br>
+            <small class="text-muted">Grey / Large</small><br>
+            <small>x1</small>
+        </div>
+        <div class="text-end fw-semibold">Rs. 3,400.00</div>
+        <div class="ms-3 text-danger fs-4" style="cursor: pointer;">○</div>
+    </div>
+
+    <!-- ITEM 2 -->
+    <div class="cart-item d-flex align-items-center p-3 mb-3 rounded shadow-sm bg-light">
+        <img src="images/hoodie2.jpeg" class="rounded me-3" width="70" height="70">
+        <div class="flex-grow-1">
+            <strong>Star Hoodie Oversize</strong><br>
+            <small class="text-muted">Black / Large</small><br>
+            <small>x1</small>
+        </div>
+        <div class="text-end fw-semibold">Rs. 3,500.00</div>
+        <div class="ms-3 text-danger fs-4" style="cursor: pointer;">○</div>
+    </div>
+
+    <!-- ITEM 3 -->
+    <div class="cart-item d-flex align-items-center p-3 mb-3 rounded shadow-sm bg-light">
+        <img src="images/techracer2.jpeg" class="rounded me-3" width="70" height="70">
+        <div class="flex-grow-1">
+            <strong>Tech Racer Jacket</strong><br>
+            <small class="text-muted">White / Large</small><br>
+            <small>x1</small>
+        </div>
+        <div class="text-end fw-semibold">Rs. 3,000.00</div>
+        <div class="ms-3 text-danger fs-4" style="cursor: pointer;">○</div>
+    </div>
+
+    <!-- ITEM 4 -->
+    <div class="cart-item d-flex align-items-center p-3 mb-3 rounded shadow-sm bg-light">
+        <img src="images/windbreaker.jpeg" class="rounded me-3" width="70" height="70">
+        <div class="flex-grow-1">
+            <strong>Wind Breaker Oversize</strong><br>
+            <small class="text-muted">Black / Large</small><br>
+            <small>x1</small>
+        </div>
+        <div class="text-end fw-semibold">Rs. 2,600.00</div>
+        <div class="ms-3 text-danger fs-4" style="cursor: pointer;">○</div>
+    </div>
+
+</div>
+
+        <!-- RIGHT SIDE (SUMMARY) -->
+        <div class="col-md-6">
+
+            <h3 class="fw-bold mb-4">Selected items</h3>
+
+            <!-- MINI SELECTED ITEM BOX -->
+            <div class="p-3 mb-3 rounded shadow-sm bg-light d-flex align-items-center">
+
+                <img src="images/pants.jpeg" width="60" height="60" class="me-3 rounded">
+
+                <div class="flex-grow-1">
+                    <strong>Star Cargo Denim</strong><br>
+                    <small class="text-muted">Grey / Medium</small><br>
+                    <small>x1</small>
+                </div>
+
+                <div class="text-end fw-semibold">Rs. 3,400.00</div>
+            </div>
+
+            <!-- SUMMARY NUMBERS -->
+            <div class="px-1 mt-4">
+
+                <div class="d-flex justify-content-between mb-2">
+                    <span>Subtotal</span>
+                    <span>Rs. 3,400.00</span>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                    <span>Shipping + tax</span>
+                    <span>Rs. 350.00</span>
+                </div>
+
+                <hr>
+
+                <div class="d-flex justify-content-between fw-bold fs-5">
+                    <span>Total</span>
+                    <span>Rs. 3,750.00</span>
+                </div>
+            </div>
+
+            <!-- CHECKOUT BUTTON -->
+            <button class="btn btn-primary w-100 mt-4 rounded-pill" style="padding: 12px;">
+                Proceed to checkout
+            </button>
+
+        </div>
+    </div>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- your partner's footer here -->
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Main JS -->
+<script src="./js/main.js"></script>
+
 </body>
 </html>
