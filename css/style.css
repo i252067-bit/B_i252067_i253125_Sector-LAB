@@ -269,3 +269,65 @@ main {
     border-radius: 14px;
 }
 
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -35%; /* hidden */
+    width: 35%;
+    height: 100vh;
+    background: #ffffff;
+    border-right: 2px solid #000;
+    z-index: 2000;
+    padding-top: 100px; /* space under the header */
+    transition: left 0.35s ease;
+}
+
+.side-menu.open {
+    left: 0; /* slide in */
+}
+
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-left: 40px;
+}
+
+.menu-content p {
+    font-family: 'Michroma', sans-serif;
+    font-size: 32px;
+    margin: 0;
+}
+.side-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.35);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 1500;
+}
+
+.side-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hamburger {
+    margin-top: 5px;
+    flex-direction: column;
+    gap: 4px;
+    background: transparent;
+    border: none;
+    padding: 4px;
+}
+
+.hamburger span {
+    width: 20px;
+    height: 2px;
+    background-color: #000;
+    display: block;
+}

@@ -15,7 +15,18 @@
 <body>
 
     <!-- Header (partner will add) -->
- <header class="header">
+  <header class="header">
+        <div class="side-menu" id="sideMenu">
+            <div class="menu-content">
+                <p>Pants</p>
+                <p>Hoodies</p>
+                <p>Jackets</p>
+                <p>Accessories</p>
+                <a href = "products-listing.html"><p>Winter XV<br>Drop</p></a>
+                <p>Summer XV<br>Drop</p>
+            </div>
+        </div>
+        <div class="side-menu-overlay" id="sideMenuOverlay"></div>
         <div class="header-container">
             <div class="nav-icon nav-left">
                 <div class="icon-placeholder hamburger">
@@ -25,15 +36,31 @@
                 </div>
             </div>
             <div class="logo">
-                <h1>Sector//LAB</h1>
+                <a href = "home.html"><h1>Sector//LAB</h1></a>
             </div>
             <div class="nav-icons nav-right">
-                <div class="icon-placeholder search"><img src = "images/search (1).png" width = "30px" height = "30px" alt = "Search"></div>
-                <div class="icon-placeholder user"><img src = "images/user (2).png" width = "30px" height = "30px" alt = "User"></div>
-                <div class="icon-placeholder cart"><img src = "images/trolley.png" width = "30px" height = "30px" alt = "Cart"></div>
+                <div class="icon-placeholder user"><a href = "login.html"><img src = "images/user (2).png" width = "30px" height = "30px" alt = "User"></a></div>
+                <div class="icon-placeholder cart"><a href = "cart.html"><img src = "images/trolley.png" width = "30px" height = "30px" alt = "Cart"></a></div>
             </div>
         </div>
     </header>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const sideMenu = document.getElementById("sideMenu");
+        const overlay = document.getElementById("sideMenuOverlay");
+    
+        function toggleMenu() {
+            sideMenu.classList.toggle("open");
+            overlay.classList.toggle("active");
+        }
+    
+        hamburger.addEventListener("click", toggleMenu);
+    
+        overlay.addEventListener("click", () => {
+            sideMenu.classList.remove("open");
+            overlay.classList.remove("active");
+        });
+    </script>
 
     <main class="container my-5">
 
@@ -146,7 +173,7 @@
     </main>
 
     <!-- Footer (partner will add) -->
-     <footer class="footer">
+    <footer class="footer">
         <div class="footer-container">
             <div class="footer-column footer-left">
                 <h3 class="footer-logo">Sector//LAB</h3>
@@ -160,8 +187,8 @@
             <div class="footer-column footer-middle">
                 <h4 class="footer-title">Support</h4>
                 <ul class="footer-links">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">FAQ's</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact and FAQ's</a></li>
                     <li><a href="#">Returns</a></li>
                     <li><a href="#">Terms & Service</a></li>
                     <li><a href="#">Privacy policy</a></li>
@@ -187,3 +214,4 @@
 
 </body>
 </html>
+
