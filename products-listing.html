@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sector//LAB - Streetwear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Michroma&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">   
+    <title>New Arrivals</title>
+    <link rel="stylesheet" href="styles-A.css" />
+</head>
+
+<body>
+
+
+    <header class="header">
+        <div class="side-menu" id="sideMenu">
+            <div class="menu-content">
+                <a href = "products-listing.html"><p>Winter XV<br>Drop</p></a>
+                <p>Clothing</p>
+                <p>Accessories</p>
+                <p>Summer XV<br>Drop</p>
+                <a href = "about.html" ><p>About us</p></a>
+                <a href = "contact.html"><p>Contact & FAQ</p></a>
+             </div>
+        </div>
+        <div class="side-menu-overlay" id="sideMenuOverlay"></div>
+        <div class="header-container">
+            <div class="nav-icon nav-left">
+                <div class="icon-placeholder hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="logo">
+                <a href = "home.html"><h1>Sector//LAB</h1></a>
+            </div>
+            <div class="nav-icons nav-right">
+                <div class="icon-placeholder user"><a href = "login.html"><img src = "img/user (2).png" width = "30px" height = "30px" alt = "User"></a></div>
+                <div class="icon-placeholder cart"><a href = "cart.html"><img src = "img/trolley.png" width = "30px" height = "30px" alt = "Cart"></a></div>
+            </div>
+        </div>
+    </header>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const sideMenu = document.getElementById("sideMenu");
+        const overlay = document.getElementById("sideMenuOverlay");
+    
+        function toggleMenu() {
+            sideMenu.classList.toggle("open");
+            overlay.classList.toggle("active");
+        }
+    
+        hamburger.addEventListener("click", toggleMenu);
+    
+        overlay.addEventListener("click", () => {
+            sideMenu.classList.remove("open");
+            overlay.classList.remove("active");
+        });
+    </script>
+
+
+
+    <div style="
+    margin: 0px 00px;
+    padding: 100px 80px 20px 80px;
+    background: #fff;
+    border: 3px solid #000;
+    border-radius: 0px 0px 24px 24px;
+">
+        <h1 style="
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 64px;
+            line-height: 1.2;
+            letter-spacing: -0.03em;
+            font-weight: 700;
+            margin-bottom: 25px;
+        ">
+            Winter XV New Arrivals
+        </h1>
+
+        <!-- Sort dropdown -->
+        <label style="
+            font-family: 'IBM Plex Mono', monospace;
+            font-style: semibold;
+            font-weight: 600;
+            font-size: 16px;
+        ">
+            Sort by:
+        </label>
+
+        <select id="sortOptions" style="
+            padding: 10px 18px;
+            border: 1px solid black;
+            border-radius: 12px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 16px;
+            margin-left: 10px;
+            cursor: pointer;
+        ">
+            <option value="relevance">Relevance</option>
+            <option value="lowToHigh">Price: Low to High</option>
+            <option value="highToLow">Price: High to Low</option>
+        </select>
+    </div>
+
+
+    <div class="products-grid" style="padding: 30px  30px 80px 30px;">
+
+        <div class="product-card">
+            <div class="product-rating"><img src = "img/star (3).png" width = "20px" height = "20px" alt = "Star"> 4.46</div>
+            <div class="product-image-placeholder">
+                <a href = "products.html"><img src = "img/9.png" width = "300px" height = "300px" alt = "Tech racer jacket"></a>
+            </div>
+            <div class="product-info">
+                <div class="product-name-price">
+                    <span class="product-name">Tech racer jacket</span>
+                    <span class="product-price">Rs. 3,000 PKR</span>
+                </div>
+                <div class="product-bottom">
+                    <div class="subtract-rectangle-bottom"></div>
+                    <a href = "products.html"><button class="view-more-btn">View More</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-rating"><img src = "img/star (3).png" width = "20px" height = "20px" alt = "Star"> 4.96</div>
+            <div class="product-image-placeholder">
+                <img src = "img/3.png" width = "300px" height = "300px" alt = "Black tech Cargo Pants">
+            </div>
+            <div class="product-info">
+                <div class="product-name-price">
+                    <span class="product-name">Black tech Cargo Pants</span>
+                    <span class="product-price">Rs. 3,500 PKR</span>
+                </div>
+                <div class="product-bottom">
+                    <div class="subtract-rectangle-bottom"></div>
+                    <button class="view-more-btn">View More</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-rating"><img src = "img/star (3).png" width = "20px" height = "20px" alt = "Star"> 4.67</div>
+            <div class="product-image-placeholder">
+                <img src = "img/8.png" width = "300px" height = "300px" alt = "Tech Gray hoodie">
+            </div>
+            <div class="product-info">
+                <div class="product-name-price">
+                    <span class="product-name">Tech Gray hoodie</span>
+                    <span class="product-price">Rs. 2,500 PKR</span>
+                </div>
+                <div class="product-bottom">
+                    <div class="subtract-rectangle-bottom"></div>
+                    <button class="view-more-btn">View More</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-rating"><img src = "img/star (3).png" width = "20px" height = "20px" alt = "Star"> 4.69</div>
+            <div class="product-image-placeholder">
+                <img src = "img/6.png" width = "300px" height = "300px" alt = "Y2k grunge sigilism Hoodie">
+            </div>
+            <div class="product-info">
+                <div class="product-name-price">
+                    <span class="product-name">Y2k grunge sigilism hoodie</span>
+                    <span class="product-price">Rs. 3,600 PKR</span>
+                </div>
+                <div class="product-bottom">
+                    <div class="subtract-rectangle-bottom"></div>
+                    <button class="view-more-btn">View More</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-rating"><img src = "img/star (3).png" width = "20px" height = "20px" alt = "Star"> 4.46</div>
+            <div class="product-image-placeholder">
+                <img src = "img/2.png" width = "300px" height = "300px" alt = "Y2k windbreaker jacket">
+            </div>
+            <div class="product-info">
+                <div class="product-name-price">
+                    <span class="product-name">Y2k windbreaker jacket</span>
+                    <span class="product-price">Rs. 2,000 PKR</span>
+                </div>
+                <div class="product-bottom">
+                    <div class="subtract-rectangle-bottom"></div>
+                    <button class="view-more-btn">View More</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-rating"><img src = "img/star (3).png" width = "20px" height = "20px" alt = "Star"> 4.46</div>
+            <div class="product-image-placeholder">
+                <img src = "img/5.png" width = "300px" height = "300px" alt = "Tech racer jacket">
+            </div>
+            <div class="product-info">
+                <div class="product-name-price">
+                    <span class="product-name">Blue cardegan zip-up</span>
+                    <span class="product-price">Rs. 3,000 PKR</span>
+                </div>
+                <div class="product-bottom">
+                    <div class="subtract-rectangle-bottom"></div>
+                    <button class="view-more-btn">View More</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-rating"><img src = "img/star (3).png" width = "20px" height = "20px" alt = "Star"> 4.76</div>
+            <div class="product-image-placeholder">
+                <img src = "img/4.png" width = "300px" height = "300px" alt = "Tech racer jacket">
+            </div>
+            <div class="product-info">
+                <div class="product-name-price">
+                    <span class="product-name">Y2k Sigilism Hoodie</span>
+                    <span class="product-price">Rs. 3,000 PKR</span>
+                </div>
+                <div class="product-bottom">
+                    <div class="subtract-rectangle-bottom"></div>
+                    <button class="view-more-btn">View More</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-rating"><img src = "img/star (3).png" width = "20px" height = "20px" alt = "Star"> 4.36</div>
+            <div class="product-image-placeholder">
+                <img src = "img/7.png" width = "300px" height = "300px" alt = "Tech racer jacket">
+            </div>
+            <div class="product-info">
+                <div class="product-name-price">
+                    <span class="product-name">Grunge Black Y2k Pants</span>
+                    <span class="product-price">Rs. 2,000 PKR</span>
+                </div>
+                <div class="product-bottom">
+                    <div class="subtract-rectangle-bottom"></div>
+                    <button class="view-more-btn">View More</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column footer-left">
+                <h3 class="footer-logo">Sector//LAB</h3>
+                <p class="footer-tagline" style="font-family: 'Manrope', sans-serif;">Crafting the streetwear that Pakistan deserves.</p>
+                <div class="social-icons">
+                    <div class="icon-placeholder instagram"></div>
+                    <div class="icon-placeholder linkedin"></div>
+                    <div class="icon-placeholder twitter"></div>
+                </div>
+            </div>
+            <div class="footer-column footer-middle">
+                <h4 class="footer-title">Support</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact and FAQ's</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Terms & Service</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-right">
+                <h4 class="footer-title">Contact Info</h4>
+                <ul class="footer-contact">
+                    <li><strong>Email:</strong><br><span style="color: rgba(255,255,255,0.5);">SectorLAB@gmail.com</span></li>
+                    <li><strong>Phone:</strong><br><span style="color: rgba(255,255,255,0.5);">+92 341 4141212</span></li>
+                    <li><strong>Office Address:</strong></li>
+                    <li style="color: rgba(255,255,255,0.5); font-weight: 500;">Office # A-25, 3rd Floor, Building # 2, Exp Av, RWP.</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

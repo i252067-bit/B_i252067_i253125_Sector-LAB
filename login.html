@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>Sign in</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sector//LAB - Streetwear</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Michroma&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">    
+        <link rel="stylesheet" href="styles-A.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="side-menu" id="sideMenu">
+                <div class="menu-content">
+                    <a href = "products-listing.html"><p>Winter XV<br>Drop</p></a>
+                    <p>Clothing</p>
+                    <p>Accessories</p>
+                    <p>Summer XV<br>Drop</p>
+                    <a href = "about.html" ><p>About us</p></a>
+                    <a href = "contact.html"><p>Contact & FAQ</p></a>
+                 </div>
+            </div>
+            </div>
+            <div class="side-menu-overlay" id="sideMenuOverlay"></div>
+            <div class="header-container">
+                <div class="nav-icon nav-left">
+                    <div class="icon-placeholder hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="logo">
+                    <a href = "home.html"><h1>Sector//LAB</h1></a>
+                </div>
+                <div class="nav-icons nav-right">
+                    <div class="icon-placeholder user"><a href = "login.html"><img src = "img/user (2).png" width = "30px" height = "30px" alt = "User"></a></div>
+                    <div class="icon-placeholder cart"><a href = "cart.html"><img src = "img/trolley.png" width = "30px" height = "30px" alt = "Cart"></a></div>
+                </div>
+            </div>
+        </header>
+<div class="signin-wrapper">
+    <div class="signin-card">
+
+        <h1 class="signin-logo">Sector//LAB</h1>
+
+        <h2 class="signin-title">Sign in.</h2>
+        <p class="signin-sub">Chose how you’d like to sign in.</p>
+
+        <!-- Google Sign in -->
+        <button class="google-btn">
+            <div class="google-icon-placeholder"><img src = "img/search (3).png" width = "30px" height = "30px" alt = "Google"></div>
+            <span>Sign in with Google.</span>
+        </button>
+
+        <!-- Divider -->
+        <div class="divider">
+            <span class="line"></span>
+            <span class="or">or</span>
+            <span class="line"></span>
+        </div>
+
+        <!-- Inputs -->
+        <input type="email" placeholder="Email" class="input-box">
+        <input type="password" placeholder="Password" class="input-box">
+
+        <!-- Continue Button -->
+        <button class="continue-btn">
+            Continue
+        </button>
+
+        <!-- Bottom Links -->
+        <div class="bottom-links">
+            <a href="#" class="forgot">Forgot Password</a>
+            <a href="#" class="signup">Sign up</a>
+        </div>
+
+    </div>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const sideMenu = document.getElementById("sideMenu");
+        const overlay = document.getElementById("sideMenuOverlay");
+    
+        function toggleMenu() {
+            sideMenu.classList.toggle("open");
+            overlay.classList.toggle("active");
+        }
+    
+        hamburger.addEventListener("click", toggleMenu);
+    
+        overlay.addEventListener("click", () => {
+            sideMenu.classList.remove("open");
+            overlay.classList.remove("active");
+        });
+    </script>
+</div>
