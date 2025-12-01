@@ -104,9 +104,123 @@
             </div>
 
             <!-- Size -->
-            <p class="fw-semibold mb-1">Size of piece:
-                <a href="#" class="ms-2 small">Size Help Quiz & Chart</a>
+            <p class="fw-semibold mb-1" style="font-family: Inter, sans-serif;">
+                Size of piece:
+                <a href="#" id="openSizeModal" class="ms-2 small" style="font-family: Inter, sans-serif;">Size Help Quiz & Chart</a>
             </p>
+            
+            <!-- OVERLAY -->
+            <div id="sizeOverlay" style="
+                display: none;
+                position: fixed;
+                inset: 0;
+                background: rgba(0,0,0,0.55);
+                backdrop-filter: blur(2px);
+                z-index: 999;
+            "></div>
+            
+            <!-- MODAL -->
+            <div id="sizeModal" style="
+                display: none;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: min(90%, 800px);
+                max-height: 90vh;
+                overflow-y: auto;
+                background: #fff;
+                border: 3px solid #000;
+                border-radius: 24px;
+                padding: 30px;
+                z-index: 1000;
+                font-family: Inter, sans-serif;
+            ">
+            
+                <!-- Close Button -->
+                <button id="closeSizeModal" style="
+                    position: absolute;
+                    top: 12px;
+                    right: 12px;
+                    background: none;
+                    border: none;
+                    font-size: 26px;
+                    cursor: pointer;
+                    font-weight: bold;
+                ">&times;</button>
+            
+                <!-- SIZE CHART IMAGE -->
+                <div style="width: 100%; overflow: hidden; border-radius: 16px;">
+                    <img src="img/size-chart.png"
+                        alt="Size Chart"
+                        style="width: 100%; height: auto; aspect-ratio: 1446 / 601; display: block;">
+                </div>
+            
+                <!-- QUIZ TITLE -->
+                <h3 style="font-weight: 600; margin-top: 25px; margin-bottom: 20px;">
+                    Size Help Quiz
+                </h3>
+            
+                <!-- QUIZ FORM -->
+                <div style="display: flex; flex-direction: column; gap: 16px;">
+            
+                    <label style="font-weight: 500;">Age</label>
+                    <select id="ageSelect" style="padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
+                        <option value="">Select Age</option>
+                        <option>13–17</option>
+                        <option>18–25</option>
+                        <option>26–35</option>
+                        <option>36–50</option>
+                        <option>50+</option>
+                    </select>
+            
+                    <label style="font-weight: 500;">Gender</label>
+                    <select id="genderSelect" style="padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
+                        <option value="">Select Gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+            
+                    <label style="font-weight: 500;">Height</label>
+                    <select id="heightSelect" style="padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
+                        <option value="">Select Height</option>
+                        <option>150–160 cm</option>
+                        <option>160–170 cm</option>
+                        <option>170–180 cm</option>
+                        <option>180–190 cm</option>
+                        <option>190+ cm</option>
+                    </select>
+            
+                    <label style="font-weight: 500;">Weight</label>
+                    <select id="weightSelect" style="padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
+                        <option value="">Select Weight</option>
+                        <option>40–55 kg</option>
+                        <option>55–70 kg</option>
+                        <option>70–85 kg</option>
+                        <option>85–100 kg</option>
+                        <option>100+ kg</option>
+                    </select>
+            
+                    <button id="calculateSize" style="
+                        margin-top: 15px;
+                        padding: 12px;
+                        border-radius: 10px;
+                        background: #000;
+                        color: #fff;
+                        font-weight: 600;
+                        border: none;
+                        cursor: pointer;
+                    ">Find My Size</button>
+            
+                    <p id="sizeResult" style="
+                        margin-top: 10px;
+                        font-weight: 600;
+                        font-size: 18px;
+                    "></p>
+            
+                </div>
+            </div>
+            
 
             <div class="d-flex gap-2 mb-3">
                 <button class="btn btn-outline-dark size-btn">S - Jacket</button>
@@ -218,7 +332,47 @@
 
 <!-- Main JS -->
 <script src="js/main.js"></script>
-
+<script>
+    const openBtn = document.getElementById("openSizeModal");
+    const closeBtn = document.getElementById("closeSizeModal");
+    const modal = document.getElementById("sizeModal");
+    const overlayy = document.getElementById("sizeOverlay");
+    
+    openBtn.onclick = (e) => {
+        e.preventDefault();
+        modal.style.display = "block";
+        overlayy.style.display = "block";
+    };
+    
+    closeBtn.onclick = () => {
+        modal.style.display = "none";
+        overlayy.style.display = "none";
+    };
+    
+    overlayy.onclick = () => {
+        modal.style.display = "none";
+        overlayy.style.display = "none";
+    };
+    
+    // Simple fake size logic for now
+    document.getElementById("calculateSize").onclick = () => {
+        const height = document.getElementById("heightSelect").value;
+        const weight = document.getElementById("weightSelect").value;
+    
+        if (!height || !weight) {
+            document.getElementById("sizeResult").innerText = "Please fill all fields.";
+            return;
+        }
+    
+        // BASIC SIZE LOGIC — customize later
+        let size = "M";
+        if (weight < 55) size = "S";
+        if (weight > 70) size = "L";
+        if (weight > 85) size = "XL";
+    
+        document.getElementById("sizeResult").innerText = "Recommended Size: " + size;
+    };
+    </script>
 </body>
 </html>
 
