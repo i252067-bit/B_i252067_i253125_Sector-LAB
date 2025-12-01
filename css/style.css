@@ -70,7 +70,7 @@ body {
     background-color: #fff;
     padding: 10px 0 20px;
     border-bottom: 2px solid #000;
-    height: 60px;
+    height: 45px;
 }
 
 
@@ -133,4 +133,128 @@ body {
     border: none;
     padding: 4px;
 }
+/* footer section */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 60px 40px 40px;
+}
 
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 60px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-logo {
+    font-family: 'Michroma', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.footer-tagline {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.45;
+    letter-spacing: -0.08px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.footer-title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 16px;
+    letter-spacing: -0.08px;
+    line-height: 1.45;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links a {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: opacity 0.3s;
+    letter-spacing: -0.08px;
+    line-height: 1.45;
+}
+
+.footer-links a:hover {
+    opacity: 0.7;
+}
+
+.footer-contact {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-contact li {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.45;
+    letter-spacing: -0.08px;
+}
+
+.footer-contact li strong {
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-contact li:has-text("Email:") strong,
+.footer-contact li:has-text("Phone:") strong {
+    font-weight: 700;
+}
+
+.footer-contact li:last-child {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 1200px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0 20px;
+    }
+    .footer {
+        padding: 40px 20px;
+    }
+}
+
+main {
+    margin-top: 100px;
+}
