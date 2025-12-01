@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sector//LAB - Streetwear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Michroma&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">   
+    <title>New Arrivals</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+
+    <header class="header">
+        <div class="side-menu" id="sideMenu">
+            <div class="menu-content">
+                <p>Pants</p>
+                <p>Hoodies</p>
+                <p>Jackets</p>
+                <p>Accessories</p>
+                <a href = "products-listing.html"><p>Winter XV<br>Drop</p></a>
+                <p>Summer XV<br>Drop</p>
+            </div>
+        </div>
+        <div class="side-menu-overlay" id="sideMenuOverlay"></div>
+        <div class="header-container">
+            <div class="nav-icon nav-left">
+                <div class="icon-placeholder hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="logo">
+                <a href = "home.html"><h1>Sector//LAB</h1></a>
+            </div>
+            <div class="nav-icons nav-right">
+                <div class="icon-placeholder user"><a href = "login.html"><img src = "img/user (2).png" width = "30px" height = "30px" alt = "User"></a></div>
+                <div class="icon-placeholder cart"><a href = "cart.html"><img src = "img/trolley.png" width = "30px" height = "30px" alt = "Cart"></a></div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div style="
+    margin: 0px 00px;
+    padding: 100px 80px 20px 80px;
+    background: #fff;
+    border: 3px solid #000;
+    border-radius: 0px 0px 24px 24px;
+">
+        <h1 style="
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 64px;
+            line-height: 1.2;
+            letter-spacing: -0.03em;
+            font-weight: 700;
+            margin-bottom: 25px;
+        ">
+            Winter XV New Arrivals
+        </h1>
+
+        <!-- Sort dropdown -->
+        <label style="
+            font-family: 'IBM Plex Mono', monospace;
+            font-style: semibold;
+            font-weight: 600;
+            font-size: 16px;
+        ">
+            Sort by:
+        </label>
+
+        <select id="sortOptions" style="
+            padding: 10px 18px;
+            border: 1px solid black;
+            border-radius: 12px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 16px;
+            margin-left: 10px;
+            cursor: pointer;
+        ">
+            <option value="relevance">Relevance</option>
+            <option value="lowToHigh">Price: Low to High</option>
+            <option value="highToLow">Price: High to Low</option>
+        </select>
+    </div>
+
+
+
+    <!-- PRODUCTS GRID -->
+    <div class="products-grid" style="padding: 30px  30px 80px 30px;">
+
+        <div class="product-card">
+            <div class="product-rating"><img src = "img/star (3).png" width = "20px" height = "20px" alt = "Star"> 4.46</div>
+            <div class="product-image-placeholder">
+                <a href = "products-detail.html"><img src = "https://lh3.googleusercontent.com/rd-gg-dl/ABS2GSnufGDdv_fiez6imq_HEL7j2Wi_LZ4rWsUB8pYo35CGCvTG6VjfRXsWO0vukK1yTSh_p_xK4AimX829cHBr7PHmSfPbWyBy91WEgs-1f_2l0nxT4qupB5WIKunjPfYJimb56t1KrGYe82rEcjfs9A8i8TWCRJpAA1YZYQufDP1tQoFinXhUJeRnLCPM9lz2KGrosW2fuahhgMH85vzqf7DqF1Q93AOyHsPO-GBGLI1_IRZMM-t3lBZp2psN42sAYZ0E21u6dH_hvk-2A5KJyQBRJiiX0g5b2fkCK2fkRcxvs0g4hqn5Ke4uxSKFbxXLc0FQGmuyGTRk-MfH5sIjnJtZafPpa2nViPvzAR99McVjribFjzq3tDCzFFB9S2rgyEcsRaI3B9VMQY_B7MrONwbUkhGAmkW7WQ_quCxdm_i3SXOhbvYcwLWRbl-hrc178mqFGaEbBnFEKnbwZ6n1HrKaYBZ8d2pPiBcXahyj_K-UvAZYhyyidI41IzzYM9DNxZZZ4n89stVh1JkMU6pEgtNiNOOlhzsObjM4_JYT6A275Owt4gqO-I54aX2A3hbL7K3FPNDd-yOj-IFPnSnv7M2TxjnCc3QnWXB6T-1OrPKKiEIW0L6T2P_Q2LtUmPyLHITmEfOj9X-od3jCwVA3enM8mz1GN3Xsyjgi5x5YOPli5G9HNdY8DsuTGmV8MevPB42jRh6qam0wDRJcCkdP02D--CjAcrH3s2HFriLv43S7FqQWWCH-v8MFo87RwqY0IuCJkateCrdc_onJsx3vCsRPJJFvR3m2y-TcjgymcI_5EyeG6IdK5BF9hLJPSi5faBdFw9ckhp8mPv8ic9eUKAOAnIoV_lth5IUiLggEO5Nkzp730ZosLSeLI-lzaS-SEnpBReawp-9rljreAHUponoojUsXmrc1z53Qi2amxVmKnYYj1-5R8QlmcQq9_czbyPYEdGBJXsHHygRE1PuBzZOSE05arYt4QU62U_YtVpY69PuY4xLiFOVY5XGi85ptRLBs7TjwN9cP18zKp78bthT6VU357auaO8xhrNet7sXiyVInP1OcMmUAuVeIBH94Nx6VmkBvFZStXRLVx3OcvoeEmrKknMbJMPzlqoohs6trieomfD9fJB6j1Ow3N2RTEu39F1TirK7idWz7287anvyeynNgF8KCVtEx0yl7g6EUEkk45sJ6_5YfjcMjhihJ4V4bOktGWafgHHw9CmdU43slI_x5xXOc4WS7VsoHJrW3X3we1_3Ij2iM-HVmxxxyd8_DGpOWxXa7QYcyO5tD586BWY4DD0wReSphhTjNlregqJani6vMwChmMLIm1aASkYG155Ifvw=s1024-rj?authuser=1" width = "300px" height = "300px" alt = "Tech racer jacket"></a>
+            </div>
+            <div class="product-info">
+                <div class="product-name-price">
+                    <span class="product-name">Tech racer jacket</span>
+                    <span class="product-price">Rs. 3,000 PKR</span>
+                </div>
+                <div class="product-bottom">
+                    <div class="subtract-rectangle-bottom"></div>
+                    <a href = "products-detail.html"><button class="view-more-btn">View More</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-rating"><img src = "img/star (3).png" width = "20px" height = "20px" alt = "Star"> 4.96</div>
+            <div class="product-image-placeholder">
+                <img src = "https://lh3.googleusercontent.com/rd-gg-dl/ABS2GSlXNbyYO0Uz7Bqh97JRGg95x2EHq7WZn5mX6gbMtCWQvsEVLA-amXMky0UJcJTDgDsBGf7DavFCh5eZtdsQbgFM0zUudheOPTeV312eZ3mLneu46mQ_N309RiB5Q6CCcq7D4qKMKL1mRofa8IbD7qnfokARhuT1RLsRdECAIinBqUD5UxlFOucqG4eqRPMCEwZR--7vcki9iN4OWojOCRSAfyTgmLBlVser3UsbhPej3LGR6pl37LtmgHGHL4hNA1DpicaAXUABwLNBnxfjcmKE5ez4OWpt7U-tUATE-43FrmySGEAsVUFWrUoPUQOvRClkq7DDZgeIRj-muMsgRdiSabwj5rH93ZAtec0MPwx7rKyHjVgTbcjEU6UoP-Z65iDZ6081qHxnbl2phWwYsAvcP8Jx-Z4BX_90uNx3n-afEpaY989FGheKebnhH26LkxWRvkCveD48ORCai3s0tv5Adp1xjSLXNNE_vENw_xJ0kYcf2_U1XThJKWUeLANHu3Ez2AiccXWqIvZg0L_0T1rT9LUqIyhbn1ZizJjrBqV6WV1UFWr7hyn2iUVmGydUV-QG2CLheFbhHfsPQYpLPt4_lali6Ev_RtbYhOV_YTqfE5dCzAmFRCHkp6W77j39Wrm-2SwOPAmcwyGgb7AjhAQijkexMoReGJzmGLMjyCAxpRiiNFfIGo1ww1kfxedLXgeP9ObkI3OgFkSGwbL8uDuzAbBPxhLx-qA6zJQMp63Cz56gqeP--JaWbt369KnGXRP8NuVU93-vng2Weh3N_EpYe1_Tt-E4HypmX4sitHD_DlI09H6Y-Af4RkvV9zAqPx9STzB96SMWE-1hg0Y5GGhtn6kC3ZNZViVNq7cbRdBOlDlnsyUSOsWTd43sOOJEqof9TlpybSWK-ENfWQ6OXwMBDjXi0Or7Vh2qmgPwoRt-KLjMUqtYU7hfyvgxr9OClwg94vNzzppEC3OpbCyXj1CFDYcO1nqswExwqgw_wq2nIkEbNr0_-OXCR4_xB6nIIJrYoKT5YHvdVkbxVBdBfgzoeiYFW2_2kbVnR-4wWF2NU4eAhSzBO2ZyMzl_Sj5A2KzE7MiDyBdB--0xInwBMgfibdP_CIOSwAoZGX64rueLUI8ptU2f4I-Tk10vFiei09VgVdPJ9BD0lVPM7wuVeRP9Ur4iEbz_9yyqgjoeKytg2mAJd9lJH_ZS6kn9AOyA0Exv9N6Dp1QZSMepFnpuw4swJXTSMpj0Ok_8RDszKlwobQkNsOhkb1IL43jIaeE3JUENvY79I_Is0q_12eTnpQtrIKg_qVBNvOwh6mHUZnneXO5arJz7ngAizL-jrIfbqN0NkhvphT8=s1024-rj?authuser=1" width = "300px" height = "300px" alt = "Black tech Cargo Pants">
+            </div>
+            <div class="product-info">
+                <div class="product-name-price">
+                    <span class="product-name">Black tech Cargo Pants</span>
+                    <span class="product-price">Rs. 3,500 PKR</span>
+                </div>
+                <div class="product-bottom">
+                    <div class="subtract-rectangle-bottom"></div>
+                    <button class="view-more-btn">View More</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-rating"><img src = "img/star (3).png" width = "20px" height = "20px" alt = "Star"> 4.67</div>
+            <div class="product-image-placeholder">
+                <img src = "https://lh3.googleusercontent.com/rd-gg-dl/ABS2GSlHwDjbKwM33P_nfFvjdwPPpmM-F1D-VNwgCScTIdDtXvmsjVSYfj2ZrY-VVRMckq7i6tngaCvGvcJqLSVLjbpS6as-duGQz-YuwvOFszKsNb6kCmjkCjQZNpgdXyh5JdqbsSzOHy5Zq9xsC67KWfX409El3wpbNzPeWe2xPwEubCj5xL_7EAFffDDAUU9dL1csK9eOj1TDkIroYDY35FDdE1CDURuLo6Y3YKB56pIAf5OqUnipHG2gEzBsIN5XCjgvNu2a6f4bqll2Aooesfn7O4UI4_FKC10iRN8cbggn7t8911wknpvn2yOfCFrYg7XzAwmY_GQ1vAEjrLLpMmhFs_9j8W4ltNrTd4dzBhr_1KFyT8Flx2KdEaEkoICy2i4JYYeRztRNwpQc8lM_8vo1Es7PyJbpdCF0P1RP0Mh1LlfeaOd6faQSbWJCECidDe_EYNox6qG7Bp_uA2ZcG22NHk1yE9VBIX82LI2y9AGYWG2or_DfRaOkEiTI9wmOfR1cD5uXCA-e_BVcSGvAIvmEn98rts5r90NRKm5Wyf5e8DVuydK06jktD0aADWKnSC_W_nlX_AjLcJVl3PuvIo3FtGSUqpIQeV6hN-kHB2Nh7ZHXdRoOHoLeLBT6WR-CuR2FxYFcUA3Gojf0DOheZ7G0LTVCR2thdh-IU_ZBIGc0WJ51I_DQvrNuiRFfbuUexGFgjib_rzVG9_9AE0XJdwdLmzDjWn89pYeArplhGlQoLLUaM-C5U3mclsQ4lN-T8kMyu1yzis-4s_i-Q-taYujucKXdrVtqdI-mNqUL36bHle9GmOU8DcOw6JT7KKcWyhvw3oy2g9SxehQDPd_qFbgI0qtuvBzx_K2K-QWv-fdkAj5yB5W3DLS11MD--rN1xgMYWeclUBz3nzmIUypdSQZAV3W-GHO1m-eJ_2FMBH80X0GpGBkUlRidXD2aNhyhrtLDsDcSqtCNZKifqPmHzV6I0vPE2O6F9OFpSOvenEar_ecB1WNd9T5kJ3FXK366XzdjbJXGL1kJb82YqRuo1Xpusim2Fc8by1CM4veUOMDUVqt5i1WtraAwv3JpjqHxJnRtEfslXiKukX95ebxMa5o7fxB-LebN2dx7oQKb9IHcVsvKT-7JA2R3royU3Q9LdytM0mvNt0Bwrq1J8jwt2OqJlINZGQqTQephYHcOplWdw8TxZrp0eILKbTqY9kBp2vz4vM95Kft4D24zAtJMdv5FyHLphCFRjJkOa6rTRAJ3iVgyujMNthB_Lay-vzNROprztvPM5kJNcH16F8bRy0M8ehihhgjn8UrAkSdlKq11j_bMO9wd0m-vNwcfiL15479D9FOC9A=s1024-rj?authuser=1" width = "300px" height = "300px" alt = "Tech Gray hoodie">
+            </div>
+            <div class="product-info">
+                <div class="product-name-price">
+                    <span class="product-name">Tech Gray hoodie</span>
+                    <span class="product-price">Rs. 2,500 PKR</span>
+                </div>
+                <div class="product-bottom">
+                    <div class="subtract-rectangle-bottom"></div>
+                    <button class="view-more-btn">View More</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-rating"><img src = "img/star (3).png" width = "20px" height = "20px" alt = "Star"> 4.69</div>
+            <div class="product-image-placeholder">
+                <img src = "https://lh3.googleusercontent.com/rd-gg-dl/ABS2GSnZ5v85PYzAbxpMN_GWEg3u36xW-UtAsFbwkPi1Ecqmbz9p7Duq5xIXJ0LSzx_S34Yo9O0a8qgQRVMSsdib8b3uG5OBO7t6iAtIBLFHrnNpIBgolj4HhWRzIF6BMnVxzATiIFHq8tQgLq_AKYar_d-ebdSld-I5y5kdQTSh18yyBLXM-bbqU47weVq5Sghm0NG-NoCnjVc4R6evjacTRljH2BxE6TzV7wRGdOw-6U4isjjkpSdBNXvt8h6QIz8Nyqr5ARoi1NoomxTFtR9sAHXf-PaqPjscn0Qxz78Akal-Yu--zBJ9zqyvG1Mref6BwfLjgdiCD0xcLAkWEXERNiGubCyDpFm_jYvoPw4Gi8tn5Vf1RwUlJDUcTdSiz2ah9d4rZ5A9H7M8Mdj-vJrmJb9fK3AoaVE5jekj5ogRxbabZLb7dN2fNc3Hqf3jmsAKRGREl--AMZPIgEOFjd-yXFO7ryutK7pVSJmKXab2_QxoduYMccqMvWyATzwZMgB4xmuMclnqZQLYWb6IXDI_rNUhtHIiCBHbeRDyW-Injgy5JIOdDOo2eghEcna6BZFVn6inBF4phz8KX2Svf8itzqX0D45miArzeCqvjCTecjLVpHPYzcRoDq63cNpuSKImt6hLPqtTv0UHpYkmIhBN0SA5jswCn687lPO6tg2F9jDemoNtujeqymeGIrK094E-jXXKcTqErkqfGFTZTn8xHW4gC_T3jcZuhLIrr-ueMuUS0RSdQZntwDStI6sGePvfpj24v6aF2Te9GQocIy6olyiPyWoxW2p2dtGO3htM2_5oQkNPQQjdDHemQrgCzvdrZZZZVsVMfgJfW12Js9D-fc0PHaHp2OPBLhYbRBQkB223sIzKgIy1Kgxvb9OahGjW2VmSoCs_BgHME94p9m8nyW-PKaHO5QhTEAmckok4COTxcSUwQscXqeJ6-BCUeTF1nzWsocBCDgZGdia6XTiVLtL_mD7-0H340K5lahV8UdcciwjjhWULZP_Hh42f-bmfEQ9rXngovIxPxQaMW_zt_CgpqgGZeIaDvKQgiMkIykHR6WuDq862E7tuQzzivjw5uvTdcw1UiKq-Psdkxxp_Ipo5GzxTbRPlh3aXOOqjdeR3HZjNghXcSvGD6NFHgAyctkojgpalbr4eYz_6outTBjsjiPCEzAAnWajAPcWotawwsrR-W-kq7bdjf1JNiSc2zFh0r-vuGuuLb865KyzK2YYLgFqhpHC_AdQmRHpWlLnIkDpQFEXE1hpAk_RQaRr4v2kKs2HKn_zmUG-AAZ8MCJk4bWntNfezRAHRFfRBqkrrF4bGdOO91_sr6Tt5Y6iJ4HKoDCbs1Bw=s1024-rj?authuser=1" width = "300px" height = "300px" alt = "Y2k grunge sigilism Hoodie">
+            </div>
+            <div class="product-info">
+                <div class="product-name-price">
+                    <span class="product-name">Y2k grunge sigilism hoodie</span>
+                    <span class="product-price">Rs. 3,600 PKR</span>
+                </div>
+                <div class="product-bottom">
+                    <div class="subtract-rectangle-bottom"></div>
+                    <button class="view-more-btn">View More</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-rating"><img src = "img/star (3).png" width = "20px" height = "20px" alt = "Star"> 4.46</div>
+            <div class="product-image-placeholder">
+                <img src = "https://lh3.googleusercontent.com/rd-gg-dl/ABS2GSnNqOnATXx4E3ifNnDycswAhHPTw0lrbEzsZ4gc0PfI492bvpc2bt76Rsa14jWSUEudER1H_XspZJLuxqivxoOI09jNlS0xBnWQ_YpCWo_0RVOEocPDu_Om60dpITT_azskB1qD_ZIIVIdD70KKSdmq40gCEugB_dogd7B_-YfjMpoMjGntfHzBQoQU8uwUuUx_n5cgdWoxguuhk-DH-ebG5bBvRdqd3ENL6tm3vaTK1zI72F-dctIXkj75Z1E0XCX1chTgbnrxhPl9tRMdpCtbgmT8YO1uDe-g4-kWog3rLCrErguNZadujgL84giHx_zCOW_xODMLuNUT-gpPxG8EgQMT2EioOvVQRE9U4a_eucsYB1lTzInEssxPVh85NxoNlDmLJFClQkUicXMzr4x11zmDLu2vNf9uixmDxuUxAtoqtYrvoIBDqwYRLo-Ach00Qw3QmKYYq87-DZG6HVq7XulcMwrz14kViMQ4KpZXjpnTJbQQrGNZ6QDYUsEmWKx8QlSIldUxTTDyU7kqs5NmcuG1t-xumHATi1Eq-Np59s5SRyzRMMcO55T6exZ0OYjn_nrsCohGED5lAIOSK3_hUezslea2eLPi0lCwC9EYHO_fmYHZtKXPt4acc-5M9vtA-yYsfiXyT0YAglwL2RAMKxKxPItEKwTNSRaP7nhNSc1CxKRfJ1pRGnId4gDNxW2SGNtcjuetW6NNF0OCYbsAcWySVPQGc4-aHWQ2PqzFEiPCic1bKPuBQLCsX1UTs3oA5yURv0AYUZ7OZwQqo7Ukr8Npv_mkf1kHP_wxdFGiUimhJwZkeAkj0Hnp3q0h7tLhohHkrEDV5kotCls66yO1T3V36b5_5hqIlpX5BosB5lorsTyRafgaGnlGhK2zOp4lNwkozKq23nHiwUuliw1MjIIIKT0S8QD-5KJ9xhKphhiMQZYdE2jN0hXqo7PCq_ehOrPWIixBLCvF6_v847fMlrt0fAQS2bKB-r1dX2H1eoeE6U1o-Z0sWRBCzSYp5scjgK_cg9tCLbMbKzDj9dmiN7xE9GFynmKB8KzlVoU8fOa2_8wzQgzfeeGZ9B2L3ZdkoKPSqbYlTW9RxVh_c_4y7jQazLNefjbW3WyJoa-aVWPi6szObvnJ1M5MxdiWMFDKmddSl3__-44LP9ZvR9fhJhPR_U_zzTZ484bMJyxx2e5_4S0DPv8JZeP04n9reI4bMHkWrXjdn9LCPFBkeklntNzHQAuxPhVo9NQdzcRacUnD7w1Yidleb48psyuwN81POEFVqo23rLBH0CQ4mKshNHnKjmgheG4waSmKSAR7qNQycbPZoooWtp8kJWkeEiNXR5kbRg=s1024-rj?authuser=1" width = "300px" height = "300px" alt = "Y2k windbreaker jacket">
+            </div>
+            <div class="product-info">
+                <div class="product-name-price">
+                    <span class="product-name">Y2k windbreaker jacket</span>
+                    <span class="product-price">Rs. 2,000 PKR</span>
+                </div>
+                <div class="product-bottom">
+                    <div class="subtract-rectangle-bottom"></div>
+                    <button class="view-more-btn">View More</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-rating"><img src = "img/star (3).png" width = "20px" height = "20px" alt = "Star"> 4.46</div>
+            <div class="product-image-placeholder">
+                <img src = "https://lh3.googleusercontent.com/rd-gg-dl/ABS2GSlq8Z9Ahp8GTOirZfb4C5iFhOyU4DsWGxNqf7S6asy1XoWUmfPcoIHX4mXVxzH0m6LhKhLy3WZ_IymidIM27n94TK1M4iwnpKtsMqu3IpJChTiJH8_AWHKDJELTyi7YlK2Ft_4Tw-aFbEUPga9UFkysuw1hJDhn458iwLg3W0Vatt4ygusEn6Avh10prfUfCHKNL3fk2mRUZ_tsVmI65BANMtYfBbQGQSKIhezCXBdCQ7oKBhAOnTBGFwfUriYsAChXPe0IBMHmzxSxnHqz7o-Ojk16XR7BQbIndu0u6zEA6_612dZWRDoOq-5PJ2fWfnouWaY24LNMbOkk78nWK3kyAhXpoX9ih7sLOaddeEO2_NHuQwVlm4a5rwnHyriOgSTV7lCT9FYLtxnVQadgGWXo300-tLup2LteWV5_e900ODvkQMarcbbolzl-tnsj1OEuH9QYCBCFAgzEj8duGRO5FXzElQPlCWMJFwfyXC9ckHsdBnD4NI8sKhN9yLMGelnPnLC7lVC7iHa0ADLcHl38mMVd3hBmglAz3NXQxcvY3cq5OYU_SmS8p7ER8QT97kHp_eOVeeny3H7OIVMLGeXACfgmvTzbaJoHJhFLMut_KJdybAgfHSMYUcKfuahxGWkSZlfWXuKb026D5IfRrRnWQD1qyqsz8o3uVeVOIjCnW7IfljCwnWRCYJLMAivb3_yqOOxWqBriTffZEjdxQjZdILGp4fl5-_jue9zsrsmiEn6whJCC_TpjSW3-TbfcW0Zw6Ufss2y30jvhqATEaqpcFvLFDtdn9h__Lrehy1ouEFnXT7DpFdEY93uF8KT3FC0BOOdT1znK4dcjshhFO7Xy7C-p94PrvoV6sGogqdZZEyrn0KDhSMhoy7Pwi_HF9XWmZRnpi93Nrirxqx3fg5ByTi-rjrsiy8v78mu05UxhNvaYvsHiKFfAFGxR3cYGlnI8WeNsW0l5Ezz-7_FWw1JxTyr6b-fKF-FtqQZRbnpm5PcHeqMyoOLpLutQiVEhh46V5k3Xyx_wVJXiw3JhAd7Dr3AIep4XeCLubKGLhvAXTtlssDxVIfQd7PO8S1MtK_L5D-s2lImVeGsmKgVGRaTZPmQyN7tINUSOEgckk44lXl2p0V0ylUVH6eyIjA2_tIGQaEpdh2wKp_CCOGWfMVuRCqSbHcofIUAHF-QY4PI6Js6yCDb_emO_beMGaoYje4Bwm5jWFxHXBGM4MFAZygFi_UksP_D8YxRjBxMjFm0rbzcQ2WnHnHxlgjApA1I36mCl4UCmYIF16YjYXJwZipT3TytiLQA7x6msGVSepwx9MuFzWzBsYkjSn9-1L3SOFLdITTaMQMU=s1024-rj?authuser=1" width = "300px" height = "300px" alt = "Tech racer jacket">
+            </div>
+            <div class="product-info">
+                <div class="product-name-price">
+                    <span class="product-name">Blue cardegan zip-up</span>
+                    <span class="product-price">Rs. 3,000 PKR</span>
+                </div>
+                <div class="product-bottom">
+                    <div class="subtract-rectangle-bottom"></div>
+                    <button class="view-more-btn">View More</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-rating"><img src = "img/star (3).png" width = "20px" height = "20px" alt = "Star"> 4.76</div>
+            <div class="product-image-placeholder">
+                <img src = "https://lh3.googleusercontent.com/rd-gg-dl/ABS2GSk5GTwJDJPNjj1SvafZemnMtAyyWZ08jNVywIX4-l5vFoIlTi01DUhiKy9Dhvc59nl46sHMOyDUtl3dGUY-UXJHlThRQu0YpOHqV4NUYM96IB5E8Ef5-tRwGIg2kOzxTPIg9hY_9PUXzLCVR1FaQKNh3rn6IxEzkPFunWk1R5vFs8vMZN8o72rHnbbifE2sGN8SiRHAUGoBTlA30d-eipwuMRyMxLmD5bM3BCTIMZPEwgU4jxSdJF1f5NMcMCAmIDEB9QRXqvvMAzRitbYXIl-9fcurJ4GrKeUat2iLWX1dZusEtxHJyuQOOuC7n4PK52reALnN7VFMt-Jo9XZOHYujregHLYrCAUEzgUMtUsa5uTvx8LeTzPlDhHjQlE0RttDjNM1Ofq1F2_15uYLEafEBNdy_JM4QGH0nvBBX9kTblQaPmohAkVhxAR7p3TvQtYa3IL1HyHnCwDDjw0fVH-760Js6szcA7QiJqnqFWSoR9_Y9eTGq4ybVjnsOajf186eYllRv_gOn3CYh2KNrel0-rtNK-_P3pF2hA7Wpg1Ab486IQDILngAp8Us4jOLTKXTe9XKL4xFgJui1DVU3LvhuZlaDyQ9kWoY0HPcbcKJaAgwaosI_P4pYJJK0k4KcpP2jEiblqI0-zsB3Ny7dfs9EmzKKlYhSpEsY2wdZDJBMrkW49kB2lHXjoB90K42qTm2JuWRTCJsE3IouDLDqkY7_6gAUFqGVJ6ceMweAE1kyyc21zURqe1AUr1mAV1C5ZO-whv8b1SXhCVK90zQccZmT92iYA_1p4DlCH0PhceHveHMYJojC-MX6w1TA149-o0Sa2VoXaugFO3Ya8X9LM54is2pOvmticPsyEFfU2NEaz5TEFd45Sse-ezE-gL9YaPGzDN2BhDrY3momFtX_lM4ecAd7Bt2SXc0kP-r_6pcXNrw0F1xI5bnMhheN152Bz8iBw33TAVgGACN4dONaP5LXkAm5fap4f1j1C3zcj7w_TjczjGmV0Xo4Ck8sQaS7WuKpSF-7i0nbVDnZSFE_r79XvP9k8GL76P7U7ifi2onUcrInVMn60SI29Drtl3cbG0YXHq_xMFjenoXGRKJOHUyNbTJjh9hqIwQTUjWU7TrM5F9Ui15KTZvH48cRblcCRFjbyEJFGg4HysQ3gfjgVit3Z4iBKEEj59PrZZCv_Hj7JO3gm73n0sogxFFoAAIZQUQ-1ZFTwv00u2KUhxkM-IWG92slSYIYbeaZLlJ2TrbURDJ8Eb4u3sWwQjx2TvwY8tFXDniDnCrWVHWkS_i82O0WYINEsZWTC5-XMf5VpQockJbVin8HheSV9U7388dodqaICY7elOo=s1024-rj?authuser=1" width = "300px" height = "300px" alt = "Tech racer jacket">
+            </div>
+            <div class="product-info">
+                <div class="product-name-price">
+                    <span class="product-name">Y2k Sigilism Hoodie</span>
+                    <span class="product-price">Rs. 3,000 PKR</span>
+                </div>
+                <div class="product-bottom">
+                    <div class="subtract-rectangle-bottom"></div>
+                    <button class="view-more-btn">View More</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-rating"><img src = "img/star (3).png" width = "20px" height = "20px" alt = "Star"> 4.36</div>
+            <div class="product-image-placeholder">
+                <img src = "https://lh3.googleusercontent.com/rd-gg-dl/ABS2GSm3vz1hhwxMTRGOSqU1ek9xF7J85b9GeF56UJUWjdOZYgTPz11sGA1g7xEqfObtvaYLWRMnTe6mvDfhJXen-Nu0xAMdU0eCuCgqQtxq_iX1EuJw9NHPL5iaKiHDGKZIMUmu-yJtMinFVatqR7lycmfgpBlYPu4yDg4tw_rQNQicKFyXgTztZovBqbP2pYmuqB-BbPnNkPOw5PrU04pMmH60X0syQb2JDZzNW7IKI-h5FqV2lLe8KItUwRsSkb7531WfpRJEKHf3XWMMoE5hqmqfX-GT63XPzNJ6Basllzo-dOM1-3Yt3UaYOTgjoAC8NuZT-y9_Ah9-iVXaLC0y8j_RElaDhyjgK5M_xOVwJMyv400aYVJi8oPiqD3Cc3j5l1zs3nC9j90910KcNL379Usbgm3Q4CHu9TBRvc6qRA7N3kY38D2hsTbVn5B6HoyPLzTIms9GqfIva0tkwHF5RQ5vSbwTRDCq5uhDhN3RV3gGacn_hAxBvoyLcTlAspdXRs7f99ip7PtDvdtHyUmH903Z9pN4Hd2m-1WlwwrqtRfhEUSILOsYih71P1KtmULw3AMvc90m-1LlhcgXDbwbSAZMnSP5DkQ0cVzPhyNJxavpl5P-COLNYgoL5gCovfE3Fe7PhsqSXLQJU5IVsRP-tm4Xbr93LixwPLmgXp9vqdfm4_5h9sprSlraKJFtbNublE8vnvKZJphu2J0-aRxOGZsKA5fXgI-EIcTnpoBOi40I52dWy9xeQjqKXsgFCYBnhU6eRex1WcsNoZc8nsgfVVG-9oCYhuytGm_9QpzYUyu_nMtCkaNANKTqarFxbCuSx71jrWFaM6CewQunzx0tl8HePnrp5m0oi8hSmOiJDhAo56xa7hfN2fRpilLmGOi-0Qb9U-pf7gqcq9N75fEqkSNaMLW7lX39hpESByDCqDADo9B6c1c5k1A_yS72znkY7q4kxw6z8aSOIttIueTp0tpGvHYAuAHTTvJOLXYT_9Lbr7w_ErCMhNgGlU_7pcvNDOiC_gzTpUr64IwXXKokDAPyCKEueuCZ_hQHXAfaugw6-BBInjPJdLaTgaYWQd2_K7g40Qzv_kQYMuvF_EYYxC97HsACOWEdMp6OuzuUz4U0tIAjqPiXbvV_JKB2hOD3hJZr_aDsXxX0_h8UEvpSUc3zPFHb2uN_iuqWErC8TJvox7tQI7saigCkdgcg8z4U6AgV3ZdvHFvshP8PZMAXzlVDbWTNo67jAtqi6mfCUgsj1VsIGznGD3A3_kpQ9qpcCqqiNJYiPGUes2-zxsnfpX2oANBiWtp271-3vvCZJRgJDbETVYzN0xNN80JcFuXp9emQvlf79g=s1024-rj?authuser=1" width = "300px" height = "300px" alt = "Tech racer jacket">
+            </div>
+            <div class="product-info">
+                <div class="product-name-price">
+                    <span class="product-name">Grunge Black Y2k Pants</span>
+                    <span class="product-price">Rs. 2,000 PKR</span>
+                </div>
+                <div class="product-bottom">
+                    <div class="subtract-rectangle-bottom"></div>
+                    <button class="view-more-btn">View More</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column footer-left">
+                <h3 class="footer-logo">Sector//LAB</h3>
+                <p class="footer-tagline" style="font-family: 'Manrope', sans-serif;">Crafting the streetwear that Pakistan deserves.</p>
+                <div class="social-icons">
+                    <div class="icon-placeholder instagram"></div>
+                    <div class="icon-placeholder linkedin"></div>
+                    <div class="icon-placeholder twitter"></div>
+                </div>
+            </div>
+            <div class="footer-column footer-middle">
+                <h4 class="footer-title">Support</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact and FAQ's</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Terms & Service</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-right">
+                <h4 class="footer-title">Contact Info</h4>
+                <ul class="footer-contact">
+                    <li><strong>Email:</strong><br><span style="color: rgba(255,255,255,0.5);">SectorLAB@gmail.com</span></li>
+                    <li><strong>Phone:</strong><br><span style="color: rgba(255,255,255,0.5);">+92 341 4141212</span></li>
+                    <li><strong>Office Address:</strong></li>
+                    <li style="color: rgba(255,255,255,0.5); font-weight: 500;">Office # A-25, 3rd Floor, Building # 2, Exp Av, RWP.</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const sideMenu = document.getElementById("sideMenu");
+        const overlay = document.getElementById("sideMenuOverlay");
+    
+        function toggleMenu() {
+            sideMenu.classList.toggle("open");
+            overlay.classList.toggle("active");
+        }
+    
+        hamburger.addEventListener("click", toggleMenu);
+    
+        overlay.addEventListener("click", () => {
+            sideMenu.classList.remove("open");
+            overlay.classList.remove("active");
+        });
+    </script>
+
+</body>
+</html>
